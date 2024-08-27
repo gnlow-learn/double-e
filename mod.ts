@@ -16,13 +16,14 @@ const prec = [
     "+u",
     "*b",
     "+b",
+    "(",
 ]
 
 const isPrecede =
 (a: string, b: string) =>
     prec.indexOf(a) < prec.indexOf(b)
 
-const input = "+a+b*c;".split("")
+const input = "+(a+b)*c;".split("")
 
 input.forEach(char => {
     console.log("state:", state)
